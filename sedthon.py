@@ -823,14 +823,6 @@ async def _(event):
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 17])
-@sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.ورود"))
-async def _(event):
-    event = await event.edit("حسناً")
-    animation_interval = 0.2
-    animation_ttl = range(96)
-    await event.edit("يتم ..")
-    animation_chars = [
-    " 
 @sedthon.on(events.NewMessage(outgoing=True, pattern=r"\.حيوانات"))
 async def _(event):
     event = await event.edit("حسناً")
